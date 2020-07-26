@@ -89,5 +89,10 @@ A arquitetura do projeto é formada por:
 	- **PUT​** /api​/Users​/{id} - Atualiza as informações de um usuário específico, através do ID do usuário.
 
 	- **DELETE**​ /api​/Users​/{id} - Remove um usuário, através do ID do usuário.
+	
+	
+## Deploy
+
+[Backend Heroku](https://error-center-apicodenation.herokuapp.com/swagger/index.html)
 
 
