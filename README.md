@@ -1,5 +1,5 @@
 
-# Central de Erros - ErrorCenterCodenation
+# Central de Erros ErrorCenterCodenation
 
 ## Objetivo
 
@@ -13,32 +13,81 @@ A arquitetura do projeto é formada por:
 -   criar um _endpoint_ que será usado para gravar os logs de erro em um banco de dados relacional
 -   a API deve ser segura, permitindo acesso apenas com um token de autenticação válido
 
-## Frontend
+## Informações adicionais
 
--   deve implementar as funcionalidades apresentadas nos wireframes
--   deve ser acessada adequadamente tanto por navegadores desktop quanto mobile
--   deve consumir a API do produto
--   desenvolvida na forma de uma Single Page Application
+### Tecnolgias utilizadas no desenvolvimento
 
-## Observações
+- C# .NET Core 3.1
+- Entity Framework Core 3.1
+- AutoMapper 
+- Swagger
+- Azure SQL Database
+- JSON Web Tokens (JWT)
+- Docker
+- Heroku
 
--   Se a aceleração tiver ênfase no backend (Java, Python, C#, Go, PHP, etc) a equipe deve obrigatoriamente implementar a API. **A implementação do frontend não é necessária**
--   Se a aceleração tiver ênfase em frontend (React, Vue, Angular, etc) a equipe deve obrigatoriamente implementar o frontend da aplicação e o backend pode ser substituido por uma aplicação _mock_. **A implementação da API não é necessária**, caso o time deseje podem ser utilizados mocks.
+### Ferramentas utilizadas no desenvolvimento
 
-## Wireframes
+- Jetbrains Rider IDE
+- Visual Studio Code
 
-Os wireframes a seguir servem para ilustrar as funcionalidades básicas que a aplicação deverá ter, porém o time terá total liberdade para definir os detalhes de implementação e estratégia a ser utilizada no desenvolvimento.
 
-![](https://codenation-challenges.s3-us-west-1.amazonaws.com/central-erros/1-cadastro.png)
+### Rotas
 
-![](https://codenation-challenges.s3-us-west-1.amazonaws.com/central-erros/2-login.png)
+- Error Controller - Endpoints para log de errors
 
-![](https://codenation-challenges.s3-us-west-1.amazonaws.com/central-erros/3-dashboard.png)
+	- **GET**​ /api​/Errors - Lista todos os erros registrados.
 
-![](https://codenation-challenges.s3-us-west-1.amazonaws.com/central-erros/4-ambientes.png)
+	- **GET**​ /api​/Errors​/{errorId} - Retorna um erro específico, através de seu ID do erro.
 
-![](https://codenation-challenges.s3-us-west-1.amazonaws.com/central-erros/5-order.png)
+	- **GET​** /api​/Errors​/level​/{levelId} - Retorna todos os logs que possuem um nível de erro específico, através do ID do nível.
+	
+	- **GET**​ /api​/Errors​/env​/{envId} - Retorna todos os logs que possuem um ambiente de erro específico, através do ID do ambiente.
 
-![](https://codenation-challenges.s3-us-west-1.amazonaws.com/central-erros/6-filtro.png)
+	- **GET**​ /api​/Errors​/env​/searchField​/searchString - Busca filtrada através de um ambiente, campo a ser buscado e termo a ser buscado.
+	
+	- **POST** ​/api​/Errors - Registar um novo erro.
+	
+	- **PUT**​ /api​/Errors​/{errorId} - Atualiza informações de um erro específico, através de seu ID do erro.
 
-![](https://codenation-challenges.s3-us-west-1.amazonaws.com/central-erros/7-detalhes.png)
+	- **DELETE** ​/api​/Errors​/{errorId} - Remove um erro específico, através de seu ID do erro.
+	
+	
+
+
+- Level Controller
+
+	- **GET**​ /api​/Levels - Lista todos os níveis de erro registrados.
+	
+	- **GET​** /api​/Levels​/{levelId} -  Retorna um nível de erro específico, através de seu ID do nível.
+
+	- **POST** ​/api​/Levels - Registra um novo nível de erro.
+
+	- **DELETE** ​/api​/Levels​/{levelId} - Remove um nível de erro específico, através de seu ID do nível.
+	
+
+- Environment Controller
+
+	 - **GET​** /api​/Environments - Lista todos os ambientes de erro registrados.
+
+	- **GET**​ /api​/Environments​/{envId} - Retorna um ambiente de erro específico, através de seu ID do ambiente.
+
+	-  **POST** ​/api​/Environments - Registra um novo ambiente para erro.
+
+	- **DELETE** ​/api​/Environments​/{envId} - Remove um ambiente de erro específico, através de seu ID do ambiente.
+	
+- User Controller
+
+	- **GET**​ /api​/Users - Lista todos os usuários registrados.
+
+	- **GET**​ /api​/Users​/{id} - Retorna um usuário específico, através do ID do usuário.
+	
+	- **POST**​ /api​/Users​/authenticate - Autentica um usuário, através de nome de usuário e senha.
+
+	- **POST​** /api​/Users​/register - Registra um novo usuário.
+
+	- **PUT​** /api​/Users​/{id} - Atualiza as informações de um usuário específico, através do ID do usuário.
+
+	- **DELETE**​ /api​/Users​/{id} - Remove um usuário, através do ID do usuário.
+
+
