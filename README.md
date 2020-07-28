@@ -95,9 +95,10 @@ A arquitetura do projeto é formada por:
 
 [Backend Heroku](https://error-center-apicodenation.herokuapp.com/swagger/index.html)
 
-## Vídeo Demonstração
+## Vídeo Demonstração e slides
 
 (https://www.youtube.com/watch?v=ZDNxD7Zj6YU&feature=youtu.be)
+(https://docs.google.com/presentation/d/1i8qYTvFoN74oENO8GrOURar0Gn7kp4tnO3RWEuN0X3A/edit?usp=sharing)
 
 P.S: Desculpem se o vídeo ficou corrido. Espero que tenha sido compreensível. Qualquer dúvida, à disposição  ^^
 
