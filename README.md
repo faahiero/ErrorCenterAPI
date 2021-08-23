@@ -93,7 +93,7 @@ A arquitetura do projeto é formada por:
 	
 ## Deploy
 
-[Backend Heroku](https://error-center-apicodenation.herokuapp.com/swagger/index.html)
+[Backend Heroku](https://error-center-rest-api.herokuapp.com/swagger/index.html)
 
 ## Vídeo Demonstração e slides
 
