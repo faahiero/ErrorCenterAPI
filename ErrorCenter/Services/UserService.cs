@@ -16,7 +16,7 @@ namespace ErrorCenter.Services
             _context = context;
         }
 
-        public User Authenticate(string username, string password)
+        public User? Authenticate(string username, string password)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 return null;
